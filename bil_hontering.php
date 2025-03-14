@@ -34,6 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($conn->query($sql_insert) === TRUE) {
             echo "<p>Bilen er registrert!</p>";
+            header('Location: registrerteBiler.php');  // Sender brukeren tilbake til registrerteBiler.php
         } else {
             echo "<p>Feil i registreringen: " . $conn->error . "</p>";
         }

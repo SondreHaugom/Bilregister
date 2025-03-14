@@ -120,3 +120,34 @@ footer a:hover {
     text-align: center;
     margin-top: 20px;
 }
+table {
+    width: 80%; /* Setter en begrensning på bredden */
+    max-width: 800px; /* Hindrer at den blir for bred */
+    margin: 20px auto; /* Sentrerer tabellen på siden */
+    border-collapse: collapse;
+    background-color: #ffffff; /* Hvit bakgrunn for tabellen */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Skyggeeffekt */
+    border-radius: 8px; /* Runde hjørner */
+    overflow: hidden; /* Sørger for at border-radius fungerer på tabellen */
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff; /* Blå bakgrunn for overskrifter */
+    color: white;
+    text-transform: uppercase;
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Hover-effekt for radene */
+}
+
+td {
+    font-size: 14px;
+    color: #333;
+}
