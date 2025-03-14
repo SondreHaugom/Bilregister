@@ -21,10 +21,10 @@ session_start(); // Start session tidlig
     </header>
     <main>
         <form action="innlogging_hontering.php" method="POST">
-            <label for="brukernavn">Brukernavn</label required>
-            <input type="text" name="brukernavn" id="brukernavn">
-            <label for="passord">Passord</label required>
-            <input type="password" name="passord" id="passord">
+            <label for="brukernavn">Brukernavn</label >
+            <input type="text" name="brukernavn" id="brukernavn" required>
+            <label for="passord">Passord</label>
+            <input type="password" name="passord" id="passord" required>
             <button type="submit">Logg inn</button>
         </form>
         <form action="loggut.php" method="POST">

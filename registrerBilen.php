@@ -18,17 +18,17 @@
     </header>
     <main>
         <form action="bil_hontering.php" method="POST">
-            <a href="">Ny eier</a>
-            <label for="regnr">Registreringsnummer</label required>
-            <input type="text" name="regnr" id="regnr">
-            <label for="merke">Type</label required>
-            <input type="text" name="type" id="type">
-            <label for="modell">Modell</label required>
-            <input type="text" name="modell" id="modell">
-            <label for="farge">Farge</label required>
-            <input type="text" name="farge" id="farge">
-            <label for="eier">Førdelsnummer</label required>
-            <input type="text" name="FD" id="FD">
+            <a href="nyEier.php">Ny eier</a>
+            <label for="regnr">Registreringsnummer</label>
+            <input type="text" name="regnr" id="regnr" required>
+            <label for="merke">Type</label>
+            <input type="text" name="type" id="type" required>
+            <label for="modell">Modell</label>
+            <input type="text" name="modell" id="modell" required>
+            <label for="farge">Farge</label>
+            <input type="text" name="farge" id="farge" required>
+            <label for="eier">Førdelsnummer</label>
+            <input type="text" name="FD" id="FD" required>
             <button type="submit">Registrer bil</button>
         </form>
     </main>
