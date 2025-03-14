@@ -7,19 +7,23 @@ session_start(); // Start session tidlig
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log inn</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <a href="">hjem</a>
-        <a href="">Log inn</a>
+    <nav>
+    <a href="index.php">hjem</a>
+        <a href="login.php">Log inn</a>
+        <a href="registrerBilen.php">Registrer bilen din</a>
         <a href="">Registrerte biler</a>
         <a href="">Brukere</a>
+    </nav>
     </header>
     <main>
         <form action="innlogging_hontering.php" method="POST">
-            <label for="brukernavn">Brukernavn</label>
+            <label for="brukernavn">Brukernavn</label required>
             <input type="text" name="brukernavn" id="brukernavn">
-            <label for="passord">Passord</label>
+            <label for="passord">Passord</label required>
             <input type="password" name="passord" id="passord">
             <button type="submit">Logg inn</button>
         </form>
