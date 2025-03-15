@@ -24,6 +24,7 @@
             <th>Type bil:</th>
             <th>Farge:</th> 
             <th>Slett bil</th>
+            <th>Rediger</th>
         </tr>
         <?php
         // Koble til databasen
@@ -45,9 +46,15 @@
                 echo "<td>" . $row["Farge"] . "</td>";
                 // Legg til en sletteknapp
                 echo  "<td>
-                <form action='slettBil.php' method='POST' onsubmit='return confirm(\"Er du sikker på at du vil slette " . htmlspecialchars($row['Merke']) . "?\");'>
+                <form action='slettBil.php' method='POST' onsubmit='return confirm(\"Er du sikker på at du vil slette " . htmlspecialchars($row['Type']) . "?\");'>
                     <input type='hidden' name='ID' value='" . $row['RegNr'] . "'>
                     <button type='submit'>Slett</button>
+                </form>
+                </td>";
+                echo "<td>
+                <form action='endreBil.php' method='POST'>
+                    <input type='hidden' name='ID' value='" . $row['RegNr'] . "'>
+                    <button type='submit'>Oppdater</button>
                 </form>
                 </td>";
 
