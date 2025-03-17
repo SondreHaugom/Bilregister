@@ -16,11 +16,12 @@ session_start(); // Start session tidlig
         <a href="login.php">Log inn</a>
         <a href="registrerBilen.php">Registrer bilen din</a>
         <a href="registrerteBiler.php">Registrerte biler</a>
-        <a href="">Brukere</a>
+        <a href="registrerteEiere.php">Brukere</a>
     </nav>
     </header>
     <main>
         <form action="innlogging_hontering.php" method="POST">
+            <a href="nyBruker.php">Ny Bruker</a>
             <label for="brukernavn">Brukernavn</label >
             <input type="text" name="brukernavn" id="brukernavn" required>
             <label for="passord">Passord</label>

@@ -13,7 +13,7 @@
         <a href="login.php">Log inn</a>
         <a href="registrerBilen.php">Registrer bilen din</a>
         <a href="registrerteBiler.php">Registrerte biler</a>
-        <a href="">Brukere</a>
+        <a href="registrerteEiere.php">Brukere</a>
     </nav>
     </header>
     <main>

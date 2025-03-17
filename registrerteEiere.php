@@ -19,10 +19,10 @@
     <main>
     <table>
         <tr>
-            <th>Registrerings nummer:</th>
-            <th>Merke:</th>
-            <th>Type bil:</th>
-            <th>Farge:</th> 
+            <th>Fødels nummer:</th>
+            <th>Fornavn:</th>
+            <th>Etternavn:</th>
+            <th>Epost:</th> 
             <th>Slett bil</th>
             <th>Rediger</th>
         </tr>
@@ -34,26 +34,27 @@
         }
 
         // SQL-spørring for å hente data
-        $sql = "SELECT * FROM `biler`";
+        $sql = "SELECT * FROM `eiere`";
         $result = $conn->query($sql);  // Korrekt metode er query()
 
         if ($result->num_rows > 0) {
             // Hent ut rader og vis dem i tabellen
             while ($row = $result->fetch_assoc()) {
-                echo "<tr><td>" . $row["RegNr"] . "</td>";
-                echo "<td>" . $row["Type"] . "</td>";
-                echo "<td>" . $row["Merke"] . "</td>";
-                echo "<td>" . $row["Farge"] . "</td>";
+                echo "<tr><td>" . $row["FD"] . "</td>";
+                echo "<td>" . $row["fornavn"] . "</td>";
+                echo "<td>" . $row["etternavn"] . "</td>";
+                echo "<td>" . $row["epost"] . "</td>";
                 // Legg til en sletteknapp
                 echo  "<td>
-                <form action='slettBil.php' method='POST' onsubmit='return confirm(\"Er du sikker på at du vil slette " . htmlspecialchars($row['Type']) . "?\");'>
-                    <input type='hidden' name='ID' value='" . $row['RegNr'] . "'>
-                    <button type='submit'>Slett</button>
+                <form action='slettEier.php' method='POST' onsubmit='return confirm(\"Er du sikker på at du vil slette " . htmlspecialchars($row['fornavn']) . "?\");'>
+                <input type='hidden' name='FD' value='" . $row['FD'] . "'>
+                <button type='submit'>Slett</button>
                 </form>
                 </td>";
+                
                 echo "<td>
-                <form action='endreBil.php' method='POST'>
-                    <input type='hidden' name='ID' value='" . $row['RegNr'] . "'>
+                <form action='endreEier.php' method='POST'>
+                    <input type='hidden' name='FD' value='" . $row['FD'] . "'>
                     <button type='submit'>Oppdater</button>
                 </form>
                 </td>";
