@@ -17,12 +17,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Hent data fra skjemaet
     $innsendtBrukernavn = $_POST['brukernavn'];
     $innsendtnavn = $_POST['navn'];
-    $innsendtOrganisasjon = $_POST['organisasjon'];
-    $innsendtPassord = password_hash($_POST['passord'], PASSWORD_DEFAULT); // Krypter passordet
+    $innsendtPassord = ($_POST['passord']); // Krypter passordet
 
     // SQL-spørring for å sette inn data i tabellen 'brukere'
-    $sql = "INSERT INTO brukere (brukernavn, navn, organisasjon, passord) 
-            VALUES (?, ?, ?, ?)";
+    $sql = "INSERT INTO brukere (brukernavn, navn, passord) 
+            VALUES (?, ?, ?)";
 
     // Forbered spørringen
     $stmt = $conn->prepare($sql);
@@ -30,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         die("Feil i SQL-spørringen: " . $conn->error);
     }
 
-    $stmt->bind_param("ssss", $innsendtBrukernavn, $innsendtnavn, $innsendtOrganisasjon, $innsendtPassord);
+    $stmt->bind_param("sss", $innsendtBrukernavn, $innsendtnavn, $innsendtPassord);
 
     // Utfør spørringen og sjekk for feil
     if ($stmt->execute()) {

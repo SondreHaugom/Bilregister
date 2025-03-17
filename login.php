@@ -12,7 +12,7 @@ session_start(); // Start session tidlig
 <body>
     <header>
     <nav>
-    <a href="index.php">hjem</a>
+    <a href="index.php">Hjem</a>
         <a href="login.php">Log inn</a>
         <a href="registrerBilen.php">Registrer bilen din</a>
         <a href="registrerteBiler.php">Registrerte biler</a>

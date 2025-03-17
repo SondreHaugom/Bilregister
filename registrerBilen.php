@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+// Sjekk om brukeren er logget inn
+if (!isset($_SESSION['bilregister']) || $_SESSION['bilregister'] !== true) {
+    header('Location: index.php'); // Send brukeren til login-siden
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +18,7 @@
 <body>
     <header>
     <nav>
-        <a href="index.php">hjem</a>
+        <a href="index.php">Hjem</a>
         <a href="login.php">Log inn</a>
         <a href="registrerBilen.php">Registrer bilen din</a>
         <a href="registrerteBiler.php">Registrerte biler</a>
