@@ -39,6 +39,6 @@ else {
     <title>Document</title>
 </head>
 <body>
-    Oppdater dyr
+    Oppdater bil
 </body>
 </html>
